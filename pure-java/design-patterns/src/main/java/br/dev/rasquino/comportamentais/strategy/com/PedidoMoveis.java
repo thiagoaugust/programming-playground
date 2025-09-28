@@ -15,4 +15,12 @@ public class PedidoMoveis extends Pedido {
     public void setNomeSetor(String nomeSetor) {
         this.nomeSetor = nomeSetor;
     }
+
+    @Override
+    public void setTipoFrete(Frete tipoFrete) {
+        if(tipoFrete instanceof FreteExpresso) {
+            throw new IllegalArgumentException("Frete expresso não disponível para móveis.");
+        }
+        super.setTipoFrete(tipoFrete);
+    }
 }
