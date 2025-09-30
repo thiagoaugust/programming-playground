@@ -5,7 +5,7 @@ const BASE = "https://api.themoviedb.org/3";
 async function getPopularSeries() {
   const res = await fetch(`${BASE}/tv/popular?language=pt-BR&page=1`, {
     headers: {
-      Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJjYmQ5YmY5MWY1NTliYTRmNGUwNWM3NDFhN2VmNzNjZCIsIm5iZiI6MTc1OTIyOTc0Ny43OTUsInN1YiI6IjY4ZGJiNzMzY2I1NWI5MGIyM2I0MjBjZSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.U2h8l9l1zOPwd41dJW8QGHoU1rg-5JZJD1mksFOSt_s`, // <- V4
+      Authorization: `Bearer ${process.env.TOKEN}`, 
       Accept: "application/json",
     },
   });
