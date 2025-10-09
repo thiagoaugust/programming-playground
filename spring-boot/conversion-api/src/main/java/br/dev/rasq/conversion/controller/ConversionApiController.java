@@ -1,7 +1,12 @@
-package br.dev.rasq.conversion;
+package br.dev.rasq.conversion.controller;
 
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RestController;
+import br.dev.rasq.conversion.commons.ConversionType;
+import br.dev.rasq.conversion.commons.dto.ConversionPayload;
+import br.dev.rasq.conversion.commons.dto.ConversionResult;
+import br.dev.rasq.conversion.commons.service.ConversionOrchestrator;
+import lombok.RequiredArgsConstructor;
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/conversion")
@@ -12,8 +17,7 @@ public class ConversionApiController {
 
     @PostMapping("/{type}")
     public ResponseEntity<ConversionResult> convert(
-            @PathVariable ConversionType type,
             @RequestBody ConversionPayload payload) {
-        return ResponseEntity.ok(orchestrator.send(type, payload));
+        return ResponseEntity.ok(orchestrator.send(payload.type(), payload));
     }
 }

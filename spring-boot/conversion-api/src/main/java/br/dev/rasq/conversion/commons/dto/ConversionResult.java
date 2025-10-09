@@ -1,3 +1,3 @@
-package br.dev.rasquino.comportamentais.strategy.exemplo2.commons.dto;
+package br.dev.rasq.conversion.commons.dto;
 
 public record ConversionResult(boolean success, String message) {}

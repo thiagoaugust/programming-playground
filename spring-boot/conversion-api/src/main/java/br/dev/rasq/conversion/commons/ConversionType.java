@@ -1,4 +1,4 @@
-package br.dev.rasquino.comportamentais.strategy.exemplo2.commons;
+package br.dev.rasq.conversion.commons;
 
 public enum ConversionType {
     META,

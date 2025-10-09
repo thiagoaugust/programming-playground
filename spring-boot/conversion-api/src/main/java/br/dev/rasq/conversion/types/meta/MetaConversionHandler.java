@@ -1,14 +1,14 @@
 package br.dev.rasq.conversion.types.meta;
 
 
-import br.dev.rasq.conversion.commons.Conversion;
+import br.dev.rasq.conversion.commons.ConversionHandler;
 import br.dev.rasq.conversion.commons.ConversionType;
 import br.dev.rasq.conversion.commons.dto.ConversionPayload;
 import br.dev.rasq.conversion.commons.dto.ConversionResult;
 import org.springframework.stereotype.Component;
 
 @Component
-public class MetaConversion  implements Conversion {
+public class MetaConversionHandler implements ConversionHandler {
 
     @Override
     public ConversionType type() {

@@ -1,11 +1,15 @@
-package br.dev.rasquino.comportamentais.strategy.exemplo2.commons.dto;
+package br.dev.rasq.conversion.commons.dto;
 
-import java.math.BigDecimal;
+import br.dev.rasq.conversion.commons.ConversionType;
+
 import java.util.Map;
 
 public record ConversionPayload(
+        ConversionType type,
         String eventId,
-        String currency,
-        BigDecimal value,
+        int value,
+        String email,
+        String phone,
+        String protocol,
         Map<String, Object> attributes
 ) {}

@@ -1,4 +1,4 @@
-package br.dev.rasquino.comportamentais.strategy.com;
+package br.dev.rasquino.comportamentais.strategy.exemplo1.com;
 
 public class PedidoMoveis extends Pedido {
 

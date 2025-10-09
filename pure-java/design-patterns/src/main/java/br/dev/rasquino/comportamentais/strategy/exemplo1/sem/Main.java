@@ -1,4 +1,4 @@
-package br.dev.rasquino.comportamentais.strategy.sem;
+package br.dev.rasquino.comportamentais.strategy.exemplo1.sem;
 
 public class Main {
 
